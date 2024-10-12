@@ -2,7 +2,7 @@
 // **************************
 
 pad_dia      = 50;          // foot pad dia
-foot_len = 170;   //length of foot to elbow inc pad
+foot_len = 160;   //length of foot to elbow inc pad
 foot_wid = 40;    //width of leg
 foot_ht = 40;  //height of leg (same as pad)
 sole = 4;
