@@ -1,9 +1,9 @@
 // Definition of dog foot size
 // **************************
 
-pad_dia      = 50;          // foot pad dia
-foot_len = 160;   //length of foot to elbow inc pad
-foot_wid = 40;    //width of leg
+pad_dia      = 60;          // foot pad dia
+foot_len = 170;   //length of foot to elbow inc pad
+foot_wid = 50;    //width of leg
 foot_ht = 40;  //height of leg (same as pad)
 sole = 4;
 sides =2;
@@ -44,6 +44,7 @@ difference () {
    //grooves for bending
    translate([pad_dia/2-12,-foot_wid/2-15,0]) cube([2,foot_wid+30,2]);
    translate([pad_dia/2-8,-foot_wid/2-15,0]) cube([2,foot_wid+30,2]);
+   translate([pad_dia/2-16,-foot_wid/2-15,0]) cube([2,foot_wid+30,2]);
    
    //leggy hole
    translate([foot_len-pad_dia/2-foot_wid/2,0,sole]) cylinder(h=sole+foot_ht-sides,r=foot_wid/2-sides);
@@ -71,8 +72,8 @@ difference () {
    translate ([0,-hole-fill/2,sole]) cube([hole,hole,foot_ht*2]);
    translate ([0,fill/2,sole]) cube([hole,hole,foot_ht*2]);
    //gap for bending
-   translate ([hole+fill,-hole*2.5-fill,sole]) cube([hole,hole*2.5,foot_ht*2]);
-   translate ([hole+fill,fill/2,sole]) cube([hole,hole*2.5,foot_ht*2]);
+   translate ([hole+fill,-hole*3-fill,sole]) cube([hole,hole*3,foot_ht*2]);
+   translate ([hole+fill,fill/2,sole]) cube([hole,hole*3,foot_ht*2]);
    
    //holes round the front
    translate ([-pad_dia/2,fill/2,sole]) cube([10,hole,hole]);
