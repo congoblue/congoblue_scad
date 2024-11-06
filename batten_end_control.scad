@@ -6,9 +6,12 @@ sidethick = 5;
 endthick = 10;
 overlap=15;
 boxht=20;
-boxlen=85;
+boxlen=90;
 boxwall=3;
 $fn=50;
+
+difference () {
+    union () {
 
 
 difference () {
@@ -46,21 +49,29 @@ difference () {
 //box
 difference () {   
 
-translate ([-boxht-sidethick,-sidethick,-boxlen+overlap+endthick]) cube ([boxht,side+sidethick*2,boxlen]);
+translate ([-boxht,-sidethick,-boxlen+overlap+endthick]) cube ([boxht,side+sidethick*2,boxlen]);
 
    //chamfer
     translate ([-side-boxht,-sidethick,overlap+endthick-3]) rotate([45,0,0]) cube([side*3,10,10]);
 
     
    //dc skt
-    translate ([-20,2,overlap]) cube ([11,9,20]);
+    translate ([-15,2,overlap]) cube ([11,9,20]);
 
    //switch
-    translate ([-13,15,overlap]) cube ([3.5,6,20]);
+    translate ([-8,15,overlap]) cube ([3.5,6,20]);
 
     
+
+
+}
+}
+
    //pcb 30x75
-    translate ([-boxht-sidethick-boxwall,0,-boxlen+overlap+endthick+boxwall]) cube ([boxht,30,boxlen-boxwall*2]);
+    translate ([-boxht-boxwall,0,-boxlen+overlap+endthick+boxwall]) cube ([boxht,30,boxlen-boxwall*2]);
+
+    //cable thru hole
+    translate ([-15,26,12]) rotate([0,90,0]) cylinder(h=20,r=4);
 
 
 }
@@ -75,6 +86,10 @@ difference () {
     translate ([boxwall,40+sidethick,overlap+endthick-6]) cube ([boxlen-boxwall*2,30,3]);
 
     }
+
+    //lid rim 
+    translate ([boxwall+3,40+sidethick+3,overlap+endthick-6]) cube ([boxlen-boxwall*2-6,30-6,3]);
+
 
     //chamfer
     translate ([0,40,overlap+endthick-3]) rotate([45,0,90]) cube([side*3,10,10]);
