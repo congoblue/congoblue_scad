@@ -1,8 +1,8 @@
 // Definition size of housing
 // **************************
 
-width      = 10.4;    
-depth      = 10.4;     
+width      = 10.25;    
+depth      = 10.25;     
 height     = 9;
 recess     = 2.4;
 rim        = 1;
@@ -15,7 +15,7 @@ act_z      = 4;
 
 act_clip_w=1;
 
-sidepad = 1.2;
+sidepad = 1.0;
 sidepad_w = 3.5;
 
 //Definition of circle angular resolution
@@ -39,7 +39,7 @@ difference () {
             cube ( [width-2*rim, depth-2*rim, (height-rim)], center = true );
          };
          
-         //led hole
+         //led hole     (COMMENT OUT for no led)
          
           translate ( [-3,3, (height-rim)/2 -3.7] ){
             cylinder ( h=20, r=1.25, center = true, $fn=20 );
@@ -48,6 +48,7 @@ difference () {
           translate ( [-4,4, (height-rim)/2 -9] ){
             cylinder ( h=20, r=2, center = true, $fn=20 );
          };
+         
 
          
      };
