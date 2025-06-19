@@ -6,7 +6,7 @@ depth      = 10.25;
 height     = 9;
 recess     = 2.4;
 rim        = 1;
-legend  = "2";
+legend  = "4";
 
 radius     = 1.2;            
 act_x      = 2.4;
@@ -15,8 +15,8 @@ act_z      = 4;
 
 act_clip_w=1;
 
-sidepad = 1.0;
-sidepad_w = 3.5;
+sidepad = 0.8; //was 1.0
+sidepad_w = 3.0; //was 3.5
 
 //Definition of circle angular resolution
 resol        = 36;           // Identical to housing !!!
@@ -40,7 +40,7 @@ difference () {
          };
          
          //led hole     (COMMENT OUT for no led)
-         
+         /*
           translate ( [-3,3, (height-rim)/2 -3.7] ){
             cylinder ( h=20, r=1.25, center = true, $fn=20 );
          };
@@ -48,7 +48,7 @@ difference () {
           translate ( [-4,4, (height-rim)/2 -9] ){
             cylinder ( h=20, r=2, center = true, $fn=20 );
          };
-         
+         */
 
          
      };
