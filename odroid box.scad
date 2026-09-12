@@ -46,11 +46,11 @@ difference () {
 
 
 //odroid
-color("red") cube([105,96,33]);
-translate ([38,96,13]) color("red") cube([36,92,9]);
+//color("red") cube([105,96,33]);
+//translate ([38,96,13]) color("red") cube([36,92,9]);
 
 //psu
-translate ([120,0,0]) color("green") cube([47,108,30]);
+//translate ([120,0,0]) color("green") cube([47,108,30]);
    
 
    
